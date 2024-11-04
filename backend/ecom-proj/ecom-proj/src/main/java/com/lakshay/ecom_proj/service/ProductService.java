@@ -1,6 +1,7 @@
 package com.lakshay.ecom_proj.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,10 @@ public class ProductService {
 
     public List<Product> getAllProducts() {
         return repo.findAll();
+    }
+
+    public Product getProductByID(int id) {
+        return repo.findById(id).orElse(null);
     }
 
 }

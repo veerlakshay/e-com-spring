@@ -10,16 +10,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+//creating class as entity
 @Entity
+//using lombok
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
 
+    //using id as primary key
     @Id
+    //generating primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
+    //product variables
     private String name;
     private String description;
     private String brand;
