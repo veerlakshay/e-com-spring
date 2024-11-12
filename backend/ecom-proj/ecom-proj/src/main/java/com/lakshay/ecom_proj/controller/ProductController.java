@@ -84,7 +84,7 @@ public class ProductController {
     }
 
     //updating product method
-    @PutMapping("/product/{id}]")
+    @PutMapping("/product/{id}")
     public ResponseEntity<String> updateProduct(@PathVariable int id , @RequestPart Product product,
                                                 @RequestPart MultipartFile imageFile){
         Product product1;
